@@ -24,6 +24,7 @@ output:
     toc: yes
     toc_depth: 2
 always_allow_html: yes
+bibliography: '`r paste0(here::here(), "/bib.bib")`'
 ---
 
 ```{r setup, include=FALSE}
@@ -45,19 +46,26 @@ require(skimr)
 
 Exploration of various data sets on a set of residential `virtual power plant` installations. These have PV, batteries and hot water controllers.
 
+# To do
+
+ * convert to drake [@drake] for speed
+ 
 # Test Data
 
-This will fail if you are not connected to the University of Otago HCS service where the data is archived
+This will fail if you are not connected to the University of Otago HCS service where the data is archived.
 
-## 2018-07-06-sampleData/RgAv_Sample_Data.csv.gz
+## RgAv_Sample_Data.csv.gz
 
-This data appears to be regional averages. We don't know how many dwellings are covered in each region.
 
 ```{r loadRgAv1}
 f1 <- "/Volumes/hum-csafe/Research Projects/GREEN Grid/externalData/solarCity/2018-07-06-sampleData/RgAv_Sample_Data.csv.gz"
 
 dt1 <- data.table::fread(f1)
 ```
+
+Loaded: `r f1`
+
+This data appears to be regional averages. We don't know how many dwellings are covered in each region.
 
 The following shows the original variable names and descriptives.
 
@@ -129,13 +137,15 @@ ggplot2::ggplot(plotDT, aes(x = halfHour, y = meanSolar, colour = region)) +
 ```
 
 
-## 2018-07-06-sampleData/Sample Monitoring Data.csv.gz
+## Sample Monitoring Data.csv.gz
 
 ```{r loadSample}
 f2 <- "/Volumes//hum-csafe/Research Projects/GREEN Grid/externalData/solarCity/2018-07-06-sampleData/Sample Monitoring Data.csv.gz"
 
 dt2 <- data.table::fread(f2)
 ```
+
+Loaded: `r f2`
 
 This data appears to be a sample of the household level monitoring data. It appears to cover `r uniqueN(dt2$Site)` differet `Sites`.
 
@@ -211,6 +221,20 @@ ggplot2::ggplot(plotDT, aes(x = halfHour, y = meanSolarExp, colour = as.factor(S
 
 # About
 
+R packages used:
+
+ * base R [baseR]
+ * data.table [@data.table]
+ * ggplt2 [@ggplot2]
+ * hms [*hms]
+ * kableExtra [@kableExtra]
+ * lubridate [@lubridate]
+ * skimr [@skimr]
+
+Plus:
+
+ * bookdown [@bookdown]
+ * knitr [@knitr]
 
 ```{r check.runtime}
 t <- proc.time() - startTime
