@@ -131,13 +131,13 @@ ggplot2::ggplot(plotDT, aes(x = halfHour, y = meanSolar, colour = region)) +
 
 ## 2018-07-06-sampleData/Sample Monitoring Data.csv.gz
 
-This data appears to be a sample of the household level monitoring data. We don't know how many dwellings are covered.
-
 ```{r loadSample}
 f2 <- "/Volumes//hum-csafe/Research Projects/GREEN Grid/externalData/solarCity/2018-07-06-sampleData/Sample Monitoring Data.csv.gz"
 
 dt2 <- data.table::fread(f2)
 ```
+
+This data appears to be a sample of the household level monitoring data. It appears to cover `r uniqueN(dt2$Site)` differet `Sites`.
 
 The following shows the original variable names and descriptives.
 
