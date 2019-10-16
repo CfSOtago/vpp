@@ -1,4 +1,4 @@
 # vpp
 virtualPowerPlants - data explorations
 
- * [notebook 1](exploreSamples.html)
+ * [notebook v1.0](exploreSamples_v1.0.html)
