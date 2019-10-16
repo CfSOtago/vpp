@@ -1,4 +1,4 @@
 # vpp
 virtualPowerPlants - data explorations
 
- * [notebook 1](exploreSamples.html)
+Reports etc best viewed at https://cfsotago.github.io/vpp/
