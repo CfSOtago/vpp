@@ -1,3 +1,5 @@
+# very basic script to see what is in the data
+
 f1 <- "/Volumes/hum-csafe/Research Projects/GREEN Grid/externalData/solarCity/2018-07-06-sampleData/RgAv_Sample_Data.csv.gz"
 
 f2 <- "/Volumes//hum-csafe/Research Projects/GREEN Grid/externalData/solarCity/2018-07-06-sampleData/Sample Monitoring Data.csv.gz"

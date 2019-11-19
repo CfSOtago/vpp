@@ -1,4 +1,4 @@
-# loads data & runs a report
+# loads data & runs the report
 
 # Load packages needed in this script
 require(bookdown)
@@ -12,6 +12,8 @@ repoParams <- list()
 
 repoParams$repoLoc <- here::here()
 
+# data held on Otago HCS
+# edit to suit your set up
 repoParams$f1 <- "/Volumes/hum-csafe/Research Projects/GREEN Grid/externalData/solarCity/2018-07-06-sampleData/RgAv_Sample_Data.csv.gz"
 
 repoParams$f2 <- "/Volumes//hum-csafe/Research Projects/GREEN Grid/externalData/solarCity/2018-07-06-sampleData/Sample Monitoring Data.csv.gz"
