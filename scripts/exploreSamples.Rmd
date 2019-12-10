@@ -71,7 +71,6 @@ This will fail if you are not connected to the University of Otago HCS service w
 dt1 <- drake::readd(df1)  # retrieve from wherever drake put it
 ```
 
-Loaded: `r repoParams$f1`
 
 This data appears to be regional averages. We don't know how many dwellings are covered in each region.
 
@@ -165,8 +164,6 @@ ggplot2::ggplot(plotDT, aes(x = halfHour, y = meanSolar, colour = region)) +
 
 dt2 <- drake::readd(df2) # retrieve from wherever drake put it
 ```
-
-Loaded: `r repoParams$f2`
 
 This data appears to be a sample of the household level monitoring data. It appears to cover `r uniqueN(dt2$Site)` differet `Sites`.
 
